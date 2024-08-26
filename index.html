@@ -6,95 +6,93 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
     <title>Document</title>
-    <script defer src="logic.js"></script>
+    <script type="text/javascript" src="logic.js"></script>
+
 </head>
 
 <body>
     <div class="container">
+        <h1 id='winner'></h1>
+
         <div class="gameWrapper">
-            <div class='cell'>
-                <div class="circle">
 
+            <div class='cell' id="11" onclick="cellClick(1,1)">
+                <div class="red">
                 </div>
-                <div class="cross">
+                <div class="blue">
                     <div></div>
                     <div></div>
                 </div>
             </div>
-            <div class='cell'>
-                <div class="circle">
-
+            <div class='cell' id="12" onclick="cellClick(1,2)">
+                <div class="red">
                 </div>
-                <div class="cross">
+                <div class="blue">
                     <div></div>
                     <div></div>
                 </div>
             </div>
-            <div class='cell'>
-                <div class="circle">
-
+            <div class='cell' id="13" onclick="cellClick(1,3)">
+                <div class="red">
                 </div>
-                <div class="cross">
+                <div class="blue">
                     <div></div>
                     <div></div>
                 </div>
             </div>
-            <div class='cell'>
-                <div class="circle">
-
+            <div class='cell' id="21" onclick="cellClick(2,1)">
+                <div class="red">
                 </div>
-                <div class="cross">
+                <div class="blue">
                     <div></div>
                     <div></div>
                 </div>
             </div>
-            <div class='cell'>
-                <div class="circle">
-
+            <div class='cell' id="22" onclick="cellClick(2,2)">
+                <div class="red">
                 </div>
-                <div class="cross">
+                <div class="blue">
                     <div></div>
                     <div></div>
                 </div>
             </div>
-            <div class='cell'>
-                <div class="circle">
-
+            <div class='cell' id="23" onclick="cellClick(2,3)">
+                <div class="red">
                 </div>
-                <div class="cross">
+                <div class="blue">
                     <div></div>
                     <div></div>
                 </div>
             </div>
-            <div class='cell'>
-                <div class="circle">
-
+            <div class='cell' id="31" onclick="cellClick(3,1)">
+                <div class="red">
                 </div>
-                <div class="cross">
+                <div class="blue">
                     <div></div>
                     <div></div>
                 </div>
             </div>
-            <div class='cell'>
-                <div class="circle">
-
+            <div class='cell' id="32" onclick="cellClick(3,2)">
+                <div class="red">
                 </div>
-                <div class="cross">
+                <div class="blue">
                     <div></div>
                     <div></div>
                 </div>
             </div>
-            <div class='cell'>
-                <div class="circle">
-
+            <div class='cell' id="33" onclick="cellClick(3,3)">
+                <div class="red">
                 </div>
-                <div class="cross">
+                <div class="blue">
                     <div></div>
                     <div></div>
                 </div>
             </div>
         </div>
+    <button id="tryAgain">Try again</button>
+
     </div>
+
 </body>
 
 </html>
