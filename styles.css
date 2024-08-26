@@ -13,7 +13,7 @@
     justify-content: center;
     flex-direction: column;
     #winner{
-
+        font-family: 'Courier New', Courier, monospace;
     }
     #tryAgain{
         padding:10px 25px;
@@ -24,6 +24,7 @@
         cursor: pointer;
         transition: 0.5s ease-in-out;
         margin-top: 25px;
+        display: none;
         &:hover{
             scale: 1.05;
         }
