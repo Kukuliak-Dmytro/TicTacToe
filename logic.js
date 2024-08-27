@@ -8,35 +8,43 @@ var turn = true;
 var turnNo = 0;
 console.log('file attached')
 function checkWinner() {
-     // Horizontal checks
-     for (let i = 0; i < 3; i++) {
-          if (field[i][0] !== 0 && field[i][0] === field[i][1] && field[i][1] === field[i][2]) {
-               return field[i][i];
-          }
+     let winner = 0;
+ 
+     switch (true) {
+         // Horizontal checks
+         case (field[0][0] !== 0 && field[0][0] === field[0][1] && field[0][1] === field[0][2]):
+             winner = field[0][0];
+             break;
+         case (field[1][0] !== 0 && field[1][0] === field[1][1] && field[1][1] === field[1][2]):
+             winner = field[1][0];
+             break;
+         case (field[2][0] !== 0 && field[2][0] === field[2][1] && field[2][1] === field[2][2]):
+             winner = field[2][0];
+             break;
+ 
+         // Vertical checks
+         case (field[0][0] !== 0 && field[0][0] === field[1][0] && field[1][0] === field[2][0]):
+             winner = field[0][0];
+             break;
+         case (field[0][1] !== 0 && field[0][1] === field[1][1] && field[1][1] === field[2][1]):
+             winner = field[0][1];
+             break;
+         case (field[0][2] !== 0 && field[0][2] === field[1][2] && field[1][2] === field[2][2]):
+             winner = field[0][2];
+             break;
+ 
+         // Diagonal checks
+         case (field[0][0] !== 0 && field[0][0] === field[1][1] && field[1][1] === field[2][2]):
+             winner = field[0][0];
+             break;
+         case (field[0][2] !== 0 && field[0][2] === field[1][1] && field[1][1] === field[2][0]):
+             winner = field[0][2];
+             break;
      }
-
-     // Vertical checks
-     for (let i = 0; i < 3; i++) {
-          if (field[0][i] !== 0 && field[0][i] === field[1][i] && field[1][i] === field[2][i]) {
-               return field[i][i];
-
-          }
-     }
-
-     // Diagonal checks
-     if (field[0][0] !== 0 && field[0][0] === field[1][1] && field[1][1] === field[2][2]) {
-          return field[1][1];
-
-     }
-
-     if (field[0][2] !== 0 && field[0][2] === field[1][1] && field[1][1] === field[2][0]) {
-          return field[1][1];
-
-     }
-
-     return 0;
-}
-
+ 
+     return winner;
+ }
+ 
 function cellClick(x, y) {
      if (turnNo <= 9) {
           const winner = checkWinner();
@@ -76,6 +84,7 @@ function cellClick(x, y) {
                turnNo++;
                turn = !turn;
                const winner = checkWinner();
+               
                if (winner !== 0) {
                     console.log('winner:', winner)
                     turnNo = 10;
