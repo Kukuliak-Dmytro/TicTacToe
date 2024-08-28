@@ -38,6 +38,7 @@
         display: grid;
         grid-template-columns: 33% 33% 33%;
         grid-template-rows: 33% 33% 33%;
+        position: relative;
         @media(max-width:576px){
             width: 90vw;
             height: 90vw;
@@ -89,6 +90,79 @@
                 bottom:50%;
                 rotate: -45deg;
                 translate: 0px 50%;
+
+            }
+        }
+        .line{
+            position: absolute;
+            background-color: red;
+            height: 10px;
+            width: 100%;
+            border-radius: 10px;
+            &:nth-of-type(1){
+                top: calc(33%/2);
+                left: 50%;
+                transform: translate(-50%, -5px);
+                transform-origin: left center;
+
+            }
+            &:nth-of-type(2){
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -5px);
+                transform-origin: left center;
+
+
+
+            }
+            &:nth-of-type(3){
+                top:83%;
+                left: 50%;
+                transform: translate(-50%, -5px);
+                transform-origin: left center;
+
+            }
+
+
+
+            &:nth-of-type(4){
+                top: 0;
+                left: calc(33%/2);
+                transform: translate(0, -5px) rotate(-270deg);
+                transform-origin: left center;
+            }
+            &:nth-of-type(5){
+                top: 0;
+                left: 50%;
+                transform: translate(0%, -5px) rotate(90deg);
+                transform-origin: left center;
+
+            }
+            &:nth-of-type(6){
+                top: 0;
+                left: 83%;
+                transform: translate(0%, -5px) rotate(90deg);
+                transform-origin: left center;
+
+
+            }
+
+            &:nth-of-type(7){
+                top: 0;
+                left: 0%;
+                width: calc(100%*1.41);
+                transform: translate(0, -5px) rotate(45deg);
+                transform-origin: left center;
+
+
+            }
+            &:nth-of-type(8){
+                top: 0;
+                left: 100%;
+                width: calc(100%*1.41);
+                transform: translate(-5px, -2.5px) rotate(135deg);
+                transform-origin: left center;
+
 
             }
         }
